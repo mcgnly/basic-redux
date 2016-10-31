@@ -14,10 +14,11 @@ class TopContainer extends Component{
 }
 
 function mapStateToProps(state){
+	console.log (state);
 	return{
 		//state.values go here
-        number : state.number,
-        timesCalled : state.timesCalled
+        number : state.topReducer.number,
+        timesCalled : state.topReducer.timesCalled
 	}
 }
 export default connect(mapStateToProps,{

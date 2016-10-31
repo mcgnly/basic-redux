@@ -21,7 +21,7 @@ class RedditContainer extends Component{
 function mapStateToProps(state){
 	return{
 		//state.values go here
-		redditTopHeadline: state.redditTopHeadline
+		redditTopHeadline: state.redditReducer.redditTopHeadline
 	}
 }
 

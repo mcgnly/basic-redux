@@ -1,12 +1,13 @@
 const initialState = {
-	redditTopHeadline: "No Headline"
+	redditTopHeadline:'No Headline'
 }
 
-const redditReducer = (state=initialState, action)=>{
+function redditReducer(state=initialState, action){
 	switch(action.type){
-
+		case 'RECIEVED_HEADLINE':
+			return {...state, redditTopHeadline:action.headline}
 		default:
-			return state
+			return state;
 	}
 }
 

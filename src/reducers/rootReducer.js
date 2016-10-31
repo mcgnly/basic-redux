@@ -1,11 +1,19 @@
-import topReducer from './topReducer.js';
-import redditReducer from './redditReducer.js';
+import topReducer from './topReducer';
+import redditReducer from './redditReducer';
 import { combineReducers } from 'redux';
 
-
-const rootReducer = combineReducers({
+export default combineReducers({
 	topReducer, 
 	redditReducer
-})
+});
 
-export default rootReducer;
+
+// export default function (state = {}, action) {
+//   return {
+//     number: topReducer(state, action),
+//     timesCalled: topReducer(state, action),
+//     redditTopHeadline: redditReducer(state, action)
+//   }
+// }
+
+
