@@ -1,6 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
+It contains a basic implementation of redux, which maintains a single immutable state-object to serve as a single source of truth for the entire application. You can find more information about it 
+[here](https://http://redux.js.org/).
+The main considerations are:
+- the store, which lives in store.js and connects the reducers and state to the app, and handles middleware
+- the provider, which connects the store to the rest of the app's components so it can access the state
+- the reducers, which take in the previous state and the actions dispatched to it, and output the new state
+  - including the rootReducer, which combines the seperated reducers into the single state, like chapters into a single book
+- the actions, which get dispatched to the reducers and trigger the process of updating state
+- the containers, which gain the method connect() and mapStateToProps, which get the state and the actions into forms the app can use and dispatch
+- Note: Redux handles synchronous information. 
+
+It also contains Thunk, a middleware that allows actions to output functions rather than just objects and adds async functionality. You can find more information about it 
+[here](https://github.com/gaearon/redux-thunk/blob/master/README.md).
+
+The project was created by following the Redux docs, so if any part is unclear, that would be a good first place to check for clues. Aside from that, it has been extensively commented for your reading pleasure. 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Below you will find some information on how to perform common create-react-app tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Table of Contents
