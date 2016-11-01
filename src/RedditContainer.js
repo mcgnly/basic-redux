@@ -11,7 +11,8 @@ class RedditContainer extends Component{
 		const {redditTopHeadline, fetchHeadline} = this.props;
 
 		return(
-			<div>
+			<div className = "container">
+				<h2>Another container, which holds: </h2>
 				<Reddit redditTopHeadline={redditTopHeadline} fetchHeadline={fetchHeadline}/>
 			</div>
 		);

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  border-style: dashed;
 }
 
 .App-logo {
@@ -23,6 +24,12 @@
   to { transform: rotate(360deg); }
 }
 
-.topPage{
-  border-style: dashed
+.container{
+  border-style: dashed;
+  border-color: red;
+}
+
+.component{
+  border-style: dashed;
+  border-color: blue;
 }
